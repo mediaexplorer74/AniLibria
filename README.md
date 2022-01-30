@@ -1,27 +1,30 @@
-# AniLibria client for Windows 10
+# AniLibria 2.4.8
 
-[![Build status](https://ci.appveyor.com/api/projects/status/mmy41v654e7e8jgd?svg=true)](https://ci.appveyor.com/project/trueromanus/anilibria-win)
-[![License](https://raw.githubusercontent.com/anilibria/anilibria-win/master/license-MIT-green.svg?sanitize=true)](https://raw.githubusercontent.com/anilibria/anilibria-win/master/license-MIT-green.svg?sanitize=true)
+## About
+This is RnD thing... This is my client for Win10Mobile (min os build 15063)  =)
+I'm not designer... The interface is a quite broken... But "it works"! =))))
+Help to improve XAML if you can... and if you love JP anime also , too! 
 
-## Важное объявление!
+## Screenshots
+![Anilibria on Lumia 950](Images/shot1.png)
+![Everlasting Summer](Images/shot2.png)
 
-Приложение больше не поддерживается! Это значит что новые версии выходить не будут.  
-Рекомендую Вам переходить на [приложение Anilibria.Qt](https://github.com/anilibria/anilibria-winmaclinux). Оно очень похоже как визуально так и по функционалу на это приложение. Весь функционал который есть в этом приложении в том или ином виде есть и в приложении Anilibria.Qt.  
-К сожалению альтернативы для пользователей Xbox нет :(
+## Note
+The great UWP project is lost... No more updates from the author....   
+He decides to make QT/NET5(6)/WIN11/MAC/LINUX version of 
+[Anilibria client](https://github.com/anilibria/anilibria-winmaclinux). 
+So, W10M or old XBoxes needed to "recriation".
 
-## Установка приложения
+#References
 
-**Внимание! Установка через Windows Store больше не работает поэтому пользуйтесь двумя другими видами установки и не спешите удалять уже установленное приложение, особенно это касается пользователей на Xbox One!**  
-Существует несколько вариантов установки приложения. Ознакомиться с ними можно на [этой странице](https://anilibria.github.io/anilibria-win/).  
+https://github.com/anilibria  Project Anilibria
 
-## Не устанавливается приложение из-за отсутствия/некорректного сертификата?
+https://github.com/anilibria/anilibria-win  Anilibria app v1.0.18 (Windows)
 
-Прочитайте [инструкцию](https://github.com/anilibria/anilibria-win/blob/master/doc/certificate.md) как установить сертификат.
+https://github.com/anilibria/anilibria-app  Anilibria app v2.4.8 (Android)
 
-## Есть проблемы с воспроизведением видео?
 
-Перейдите на [страницу](https://github.com/anilibria/anilibria-win/blob/master/doc/video-issues.md) на которой перечислены известные проблемы с вопроизведением видео и методы их решения. 
+AS-IS. Just for fun! 
 
-## Обратная связь
+-- me 2022
 
-На [этом сайте](https://anilibriawin10.reformal.ru/) Вы можете оставлять вопросы, сообщать об ошибках а также предлагать идеи.

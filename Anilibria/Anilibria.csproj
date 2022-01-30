@@ -1,0 +1,708 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{2BD78F06-12F1-48EC-B248-551DBD2ADC63}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anilibria</RootNamespace>
+    <AssemblyName>Anilibria</AssemblyName>
+    <DefaultLanguage>ru</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>Anilibria_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+    <AppInstallerUpdateFrequency>0</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
+    <PackageCertificateThumbprint>
+    </PackageCertificateThumbprint>
+    <AppInstallerUri>https://anilibria.github.io/anilibria-win/dist</AppInstallerUri>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <AppxPackageDir>C:\Users\media\source\repos\anilibria-uwp\AppPackages\</AppxPackageDir>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Collections\IncrementalLoadingCollection.cs" />
+    <Compile Include="Controls\AlphabetUserControl.xaml.cs">
+      <DependentUpon>AlphabetUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BindableGridControl.cs" />
+    <Compile Include="Controls\BindableListView.cs" />
+    <Compile Include="Controls\ExternalLinkIcon.xaml.cs">
+      <DependentUpon>ExternalLinkIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ChatIcon.xaml.cs">
+      <DependentUpon>ChatIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CloseEyeIcon.xaml.cs">
+      <DependentUpon>CloseEyeIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CloseIcon.xaml.cs">
+      <DependentUpon>CloseIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DarkAnilibriaIcon.xaml.cs">
+      <DependentUpon>DarkAnilibriaIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DefaultAnilibriaIcon.xaml.cs">
+      <DependentUpon>DefaultAnilibriaIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DiceIcon.xaml.cs">
+      <DependentUpon>DiceIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DonateIcon.xaml.cs">
+      <DependentUpon>DonateIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IIconUserControl.cs" />
+    <Compile Include="Controls\MaintenanceIcon.xaml.cs">
+      <DependentUpon>MaintenanceIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopcornIcon.xaml.cs">
+      <DependentUpon>PopcornIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DownloadIcon.xaml.cs">
+      <DependentUpon>DownloadIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EyeIcon.xaml.cs">
+      <DependentUpon>EyeIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FavoriteIcon.xaml.cs">
+      <DependentUpon>FavoriteIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FlyoutHelpers.cs" />
+    <Compile Include="Controls\HumburgerIcon.xaml.cs">
+      <DependentUpon>HumburgerIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LogoutIcon.xaml.cs">
+      <DependentUpon>LogoutIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NotificationIcon.xaml.cs">
+      <DependentUpon>NotificationIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OpenEyeIcon.xaml.cs">
+      <DependentUpon>OpenEyeIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PauseIcon.xaml.cs">
+      <DependentUpon>PauseIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlayerButtonControl.cs" />
+    <Compile Include="Controls\PlayIcon.xaml.cs">
+      <DependentUpon>PlayIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PointingGridControl.cs" />
+    <Compile Include="Controls\PresentationClasses\AlphabetModel.cs" />
+    <Compile Include="Controls\RefreshIcon.xaml.cs">
+      <DependentUpon>RefreshIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchIcon.xaml.cs">
+      <DependentUpon>SearchIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SettingsIcon.xaml.cs">
+      <DependentUpon>SettingsIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SortIcon.xaml.cs">
+      <DependentUpon>SortIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimingTextBox.cs" />
+    <Compile Include="Controls\UserIcon.xaml.cs">
+      <DependentUpon>UserIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VideoPlayerIcon.xaml.cs">
+      <DependentUpon>VideoPlayerIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\YoutubeIcon.xaml.cs">
+      <DependentUpon>YoutubeIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\BackgroundThemeConverter.cs" />
+    <Compile Include="Converters\CacheImageBrushConverter.cs" />
+    <Compile Include="Converters\CacheImageConverter.cs" />
+    <Compile Include="Converters\InverseBooleanConverter.cs" />
+    <Compile Include="Converters\IsNotNullConverter.cs" />
+    <Compile Include="Converters\IsNullValueConverter.cs" />
+    <Compile Include="Converters\MediaSourceConverter.cs" />
+    <Compile Include="Converters\TextBlockHighlight.cs" />
+    <Compile Include="Converters\TextBlockHtmlConverter.cs" />
+    <Compile Include="GlobalState\LaunchParameters.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Pages\AboutPage\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AboutPage\AboutViewModel.cs" />
+    <Compile Include="Pages\AuthorizePage\AuthorizeView.xaml.cs">
+      <DependentUpon>AuthorizeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AuthorizePage\AuthorizeViewModel.cs" />
+    <Compile Include="Pages\CinemaHall\CinemaHallView.xaml.cs">
+      <DependentUpon>CinemaHallView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CinemaHall\CinemaHallViewModel.cs" />
+    <Compile Include="Pages\CinemaHall\PresentationClasses\CinemaHallReleaseModel.cs" />
+    <Compile Include="Pages\DiagnosticsPage\DiagnosticsPageView.xaml.cs">
+      <DependentUpon>DiagnosticsPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DonatePage\DonateView.xaml.cs">
+      <DependentUpon>DonateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DonatePage\DonateViewModel.cs" />
+    <Compile Include="Pages\DownloadManagerPage\DownloadManagerView.xaml.cs">
+      <DependentUpon>DownloadManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DownloadManagerPage\DownloadManagerViewModel.cs" />
+    <Compile Include="Pages\DownloadManagerPage\PresentationClasses\DownloadSectionItem.cs" />
+    <Compile Include="Pages\DownloadManagerPage\PresentationClasses\DownloadSectionType.cs" />
+    <Compile Include="Pages\DownloadManagerPage\PresentationClasses\DownloadVideoItemModel.cs" />
+    <Compile Include="Pages\HomePage\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\UICommand.cs" />
+    <Compile Include="MVVM\UIGenericCommand.cs" />
+    <Compile Include="MVVM\ViewModel.cs" />
+    <Compile Include="MVVM\WeakAction.cs" />
+    <Compile Include="MVVM\WeakActionGeneric.cs" />
+    <Compile Include="MVVM\WeakFunc.cs" />
+    <Compile Include="MVVM\WeakFuncGeneric.cs" />
+    <Compile Include="Pages\HomePage\HomeViewModel.cs" />
+    <Compile Include="Pages\HomePage\PresentationClasses\SplitViewItem.cs" />
+    <Compile Include="Pages\INavigation.cs" />
+    <Compile Include="Pages\MaintenancePage\MaintenancePageView.xaml.cs">
+      <DependentUpon>MaintenancePageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MaintenancePage\MaintenancePageViewModel.cs" />
+    <Compile Include="Pages\Models\ReleaseNavigateEvent.cs" />
+    <Compile Include="Pages\Models\ReleaseNavigateEventType.cs" />
+    <Compile Include="Pages\OnlinePlayer\OnlinePlayerView.xaml.cs">
+      <DependentUpon>OnlinePlayerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OnlinePlayer\OnlinePlayerViewModel.cs" />
+    <Compile Include="Pages\OnlinePlayer\PlaybackState.cs" />
+    <Compile Include="Pages\OnlinePlayer\PresentationClasses\CinemaHallLinkModel.cs" />
+    <Compile Include="Pages\OnlinePlayer\PresentationClasses\MinuteItem.cs" />
+    <Compile Include="Pages\OnlinePlayer\PresentationClasses\PlaylistButtonPosition.cs" />
+    <Compile Include="Pages\OnlinePlayer\PresentationClasses\PlaylistButtonPositionItem.cs" />
+    <Compile Include="Pages\OnlinePlayer\PresentationClasses\ReleaseLinkModel.cs" />
+    <Compile Include="Pages\OnlinePlayer\PresentationClasses\SecondItem.cs" />
+    <Compile Include="Pages\OnlinePlayer\VideoTimeFormatter.cs" />
+    <Compile Include="Pages\PresentationClasses\MessageModel.cs" />
+    <Compile Include="Pages\ProtocolsPages\ChangeApiControl.xaml.cs">
+      <DependentUpon>ChangeApiControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProtocolsPages\ChangeApiView.xaml.cs">
+      <DependentUpon>ChangeApiView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Releases\PresentationClasses\FavoriteMarkItem.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\FavoriteMarkType.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\OnlineVideoModel.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\OpenVideoMode.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\OpenVideoModeModel.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\ReleaseCardLinkModel.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\ReleaseModel.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\SectionModel.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\SectionType.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\SeenMarkItem.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\SeenMarkType.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\SortingDirectionType.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\SortingItemModel.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\SortingItemType.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\SortingDirectionModel.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\TorrentDownloadMode.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\TorrentDownloadModeModel.cs" />
+    <Compile Include="Pages\Releases\PresentationClasses\TorrentModel.cs" />
+    <Compile Include="Pages\Releases\ReleasesItems.cs" />
+    <Compile Include="Pages\Releases\ReleasesView.xaml.cs">
+      <DependentUpon>ReleasesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Releases\ReleasesViewModel.cs" />
+    <Compile Include="Pages\Youtube\PresentationClasses\YoutubeVideoModel.cs" />
+    <Compile Include="Pages\Youtube\YoutubeView.xaml.cs">
+      <DependentUpon>YoutubeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Youtube\YoutubeViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DownloadItemsMode.cs" />
+    <Compile Include="Services\Exceptions\AuthorizeDeletedException.cs" />
+    <Compile Include="Services\IAnalyticsService.cs" />
+    <Compile Include="Services\IAnilibriaApiService.cs" />
+    <Compile Include="Services\IDownloadService.cs" />
+    <Compile Include="Services\ILocalDatabasePath.cs" />
+    <Compile Include="Services\Implementations\AnalyticsService.cs" />
+    <Compile Include="Services\Implementations\AnilibriaApiService.cs" />
+    <Compile Include="Services\Implementations\ApiService.cs" />
+    <Compile Include="Services\Implementations\DownloadManager.cs" />
+    <Compile Include="Services\Implementations\DownloadService.cs" />
+    <Compile Include="Services\Implementations\JumpListService.cs" />
+    <Compile Include="Services\Implementations\LiteDbEntityCollection.cs" />
+    <Compile Include="Services\Implementations\LiteDbLocalPath.cs" />
+    <Compile Include="Services\Implementations\ObserverEvents.cs" />
+    <Compile Include="Pages\DownloadManagerPage\PresentationClasses\DownloadItemModel.cs" />
+    <Compile Include="Services\Implementations\ReleaseSingletonService.cs" />
+    <Compile Include="Services\Implementations\ReleasesService.cs" />
+    <Compile Include="Services\Implementations\StorageService.cs" />
+    <Compile Include="Services\Implementations\SynchronizeService.cs" />
+    <Compile Include="Services\Implementations\SyncService.cs" />
+    <Compile Include="Services\Implementations\SystemService.cs" />
+    <Compile Include="Services\IReleasesService.cs" />
+    <Compile Include="Services\ISynchronizationService.cs" />
+    <Compile Include="Services\PresentationClasses\ApiResponse.cs" />
+    <Compile Include="Services\PresentationClasses\ApiResponseError.cs" />
+    <Compile Include="Services\PresentationClasses\AuthorizationModel.cs" />
+    <Compile Include="Services\PresentationClasses\BlockedInfo.cs" />
+    <Compile Include="Services\PresentationClasses\DeviceFamilyType.cs" />
+    <Compile Include="Services\PresentationClasses\DeviceInputType.cs" />
+    <Compile Include="Services\PresentationClasses\DownloadItem.cs" />
+    <Compile Include="Services\PresentationClasses\DownloadVideoQuality.cs" />
+    <Compile Include="Services\PresentationClasses\Favorite.cs" />
+    <Compile Include="Services\PresentationClasses\FavoriteModel.cs" />
+    <Compile Include="Services\PresentationClasses\PagingInfo.cs" />
+    <Compile Include="Services\PresentationClasses\PagingList.cs" />
+    <Compile Include="Services\PresentationClasses\PlaylistItem.cs" />
+    <Compile Include="Services\PresentationClasses\Release.cs" />
+    <Compile Include="Services\PresentationClasses\ScheduleDayModel.cs" />
+    <Compile Include="Services\PresentationClasses\ScheduleModel.cs" />
+    <Compile Include="Services\PresentationClasses\StatusType.cs" />
+    <Compile Include="Services\PresentationClasses\TorrentItem.cs" />
+    <Compile Include="Services\PresentationClasses\TouchReleaseModel.cs" />
+    <Compile Include="Services\PresentationClasses\UserModel.cs" />
+    <Compile Include="Storage\Entities\CinemaHallReleaseEntity.cs" />
+    <Compile Include="Storage\Entities\VideoQuality.cs" />
+    <Compile Include="Services\PresentationClasses\YoutubeModel.cs" />
+    <Compile Include="Storage\Entities\ChangesEntity.cs" />
+    <Compile Include="Storage\Entities\DownloadFileEntity.cs" />
+    <Compile Include="Storage\Entities\DownloadReleaseEntity.cs" />
+    <Compile Include="Storage\Entities\DownloadReleaseVideoEntity.cs" />
+    <Compile Include="Storage\Entities\HistoryChangeEntity.cs" />
+    <Compile Include="Storage\Entities\LocalFavoriteEntity.cs" />
+    <Compile Include="Storage\Entities\PlayerRestoreEntity.cs" />
+    <Compile Include="Storage\Entities\ReleaseVideoStateEntity.cs" />
+    <Compile Include="Storage\Entities\PlaylistItemEntity.cs" />
+    <Compile Include="Storage\Entities\ScheduleEntity.cs" />
+    <Compile Include="Storage\Entities\TorrentItemEntity.cs" />
+    <Compile Include="Storage\Entities\VideoStateEntity.cs" />
+    <Compile Include="Storage\IEnitityCollection.cs" />
+    <Compile Include="Storage\Implementations\DataContext.cs" />
+    <Compile Include="Storage\Entities\ReleaseEntity.cs" />
+    <Compile Include="Storage\Entities\UserFavoriteEntity.cs" />
+    <Compile Include="Storage\Entities\YoutubeEntity.cs" />
+    <Compile Include="Storage\IDataContext.cs" />
+    <Compile Include="ThemeChanger\ControlsThemeChanger.cs" />
+    <Compile Include="ThemeChanger\SubscribeItemModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Anilibria_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\anilibriaicon.png" />
+    <Content Include="Assets\anilibriaiconbig.png" />
+    <Content Include="Assets\anilibriaposter.png" />
+    <Content Include="Assets\anilibriaposterwithtransparency.png" />
+    <Content Include="Assets\Assets.txt" />
+    <Content Include="Assets\dark.png" />
+    <Content Include="Assets\donate.jpg" />
+    <Content Include="Assets\Icons\AnilibriaLogo.svg" />
+    <Content Include="Assets\Icons\anilibrialogodark.svg" />
+    <Content Include="Assets\Icons\anilibrialogodefault.svg" />
+    <Content Include="Assets\Icons\authorization.svg" />
+    <Content Include="Assets\Icons\cast.svg" />
+    <Content Include="Assets\Icons\chat.svg" />
+    <Content Include="Assets\Icons\close.svg" />
+    <Content Include="Assets\Icons\dice.svg" />
+    <Content Include="Assets\Icons\donate.svg" />
+    <Content Include="Assets\Icons\favorite.svg" />
+    <Content Include="Assets\Icons\favoriteblack.svg" />
+    <Content Include="Assets\Icons\hambergermenu.svg" />
+    <Content Include="Assets\Icons\logout.svg" />
+    <Content Include="Assets\Icons\menu.svg" />
+    <Content Include="Assets\Icons\notification.svg" />
+    <Content Include="Assets\Icons\options.svg" />
+    <Content Include="Assets\Icons\pause.svg" />
+    <Content Include="Assets\Icons\refresh.svg" />
+    <Content Include="Assets\Icons\removefavorite.svg" />
+    <Content Include="Assets\Icons\search.svg" />
+    <Content Include="Assets\Icons\settings.svg" />
+    <Content Include="Assets\Icons\slider.svg" />
+    <Content Include="Assets\Icons\filter.svg" />
+    <Content Include="Assets\Icons\humburger.svg" />
+    <Content Include="Assets\Icons\playlist.svg" />
+    <Content Include="Assets\Icons\sort.svg" />
+    <Content Include="Assets\Icons\speaker.svg" />
+    <Content Include="Assets\Icons\user.svg" />
+    <Content Include="Assets\Icons\videoplayer.svg" />
+    <Content Include="Assets\Icons\youtube.svg" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\mute.svg" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\authbackground.jpg" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\howtousecinemahall.pdf" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\AlphabetUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ExternalLinkIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ChatIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CloseEyeIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CloseIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DarkAnilibriaIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DefaultAnilibriaIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DiceIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DonateIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MaintenanceIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PopcornIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DownloadIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\EyeIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FavoriteIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HumburgerIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\LogoutIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\NotificationIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\OpenEyeIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PauseIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PlayIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RefreshIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SearchIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SettingsIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SortIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\UserIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\VideoPlayerIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\YoutubeIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AboutPage\AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AuthorizePage\AuthorizeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CinemaHall\CinemaHallView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DiagnosticsPage\DiagnosticsPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DonatePage\DonateView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\DownloadManagerPage\DownloadManagerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HomePage\HomeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\MaintenancePage\MaintenancePageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OnlinePlayer\OnlinePlayerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProtocolsPages\ChangeApiControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ProtocolsPages\ChangeApiView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Releases\ReleasesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Youtube\YoutubeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BencodeNET">
+      <Version>2.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.8.14</Version>
+    </PackageReference>
+    <PackageReference Include="LiteDB">
+      <Version>4.1.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>2.6.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>2.6.4</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.13</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
