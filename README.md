@@ -1,8 +1,8 @@
 # AniLibria 2.4.8
 
 ## About
-This is RnD thing... This is my client for Win10Mobile (min os build 15063)  =)
-I'm not designer... The interface is a quite broken... But "it works"! =))))
+This is RnD thing... This is my client for Win10Mobile (min os build 15063).
+I'm not designer... and the interface is a quite broken... but... it just works! =))))
 Help to improve XAML if you can... and if you love JP anime also , too! 
 
 ## Screenshots
